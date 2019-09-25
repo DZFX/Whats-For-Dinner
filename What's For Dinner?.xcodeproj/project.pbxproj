@@ -11,6 +11,12 @@
 		BF2AF56F233B4F6B0050A698 /* UserRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF56E233B4F6B0050A698 /* UserRating.swift */; };
 		BF2AF571233B4F720050A698 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF570233B4F720050A698 /* Photo.swift */; };
 		BF2AF573233B54950050A698 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF572233B54950050A698 /* Location.swift */; };
+		BF2AF576233B5D130050A698 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF575233B5D130050A698 /* APIClient.swift */; };
+		BF2AF579233B6DE70050A698 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF578233B6DE70050A698 /* ServiceProtocol.swift */; };
+		BF2AF57B233B6E370050A698 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF57A233B6E370050A698 /* URLSessionProtocol.swift */; };
+		BF2AF57E233B6E860050A698 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF57D233B6E860050A698 /* HTTPMethod.swift */; };
+		BF2AF580233B6EE00050A698 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF57F233B6EE00050A698 /* Task.swift */; };
+		BF2AF582233B6F7D0050A698 /* ParametersEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF581233B6F7D0050A698 /* ParametersEncoding.swift */; };
 		BF41A4C4233AD54D000D2DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41A4C3233AD54D000D2DBE /* AppDelegate.swift */; };
 		BF41A4C6233AD54D000D2DBE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41A4C5233AD54D000D2DBE /* FirstViewController.swift */; };
 		BF41A4C8233AD54D000D2DBE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41A4C7233AD54D000D2DBE /* SecondViewController.swift */; };
@@ -25,6 +31,12 @@
 		BF2AF56E233B4F6B0050A698 /* UserRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRating.swift; sourceTree = "<group>"; };
 		BF2AF570233B4F720050A698 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BF2AF572233B54950050A698 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BF2AF575233B5D130050A698 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		BF2AF578233B6DE70050A698 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		BF2AF57A233B6E370050A698 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		BF2AF57D233B6E860050A698 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BF2AF57F233B6EE00050A698 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		BF2AF581233B6F7D0050A698 /* ParametersEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoding.swift; sourceTree = "<group>"; };
 		BF41A4C0233AD54D000D2DBE /* What's For Dinner?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What's For Dinner?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF41A4C3233AD54D000D2DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF41A4C5233AD54D000D2DBE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +69,35 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		BF2AF574233B5CFC0050A698 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BF2AF57C233B6E790050A698 /* Enums */,
+				BF2AF577233B6DD50050A698 /* Protocols */,
+				BF2AF575233B5D130050A698 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BF2AF577233B6DD50050A698 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF2AF578233B6DE70050A698 /* ServiceProtocol.swift */,
+				BF2AF57A233B6E370050A698 /* URLSessionProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BF2AF57C233B6E790050A698 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BF2AF57D233B6E860050A698 /* HTTPMethod.swift */,
+				BF2AF57F233B6EE00050A698 /* Task.swift */,
+				BF2AF581233B6F7D0050A698 /* ParametersEncoding.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		BF41A4B7233AD54D000D2DBE = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +117,7 @@
 		BF41A4C2233AD54D000D2DBE /* What's For Dinner? */ = {
 			isa = PBXGroup;
 			children = (
+				BF2AF574233B5CFC0050A698 /* Network */,
 				BF2AF56B233B4F4A0050A698 /* Detail */,
 				BF41A4D7233ADDE7000D2DBE /* Home */,
 				BF41A4C3233AD54D000D2DBE /* AppDelegate.swift */,
@@ -169,14 +211,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2AF57B233B6E370050A698 /* URLSessionProtocol.swift in Sources */,
 				BF2AF571233B4F720050A698 /* Photo.swift in Sources */,
+				BF2AF582233B6F7D0050A698 /* ParametersEncoding.swift in Sources */,
+				BF2AF57E233B6E860050A698 /* HTTPMethod.swift in Sources */,
 				BF2AF56D233B4F620050A698 /* Review.swift in Sources */,
 				BF2AF573233B54950050A698 /* Location.swift in Sources */,
 				BF41A4D9233B3609000D2DBE /* Restaurant.swift in Sources */,
 				BF41A4C8233AD54D000D2DBE /* SecondViewController.swift in Sources */,
+				BF2AF580233B6EE00050A698 /* Task.swift in Sources */,
 				BF2AF56F233B4F6B0050A698 /* UserRating.swift in Sources */,
 				BF41A4C4233AD54D000D2DBE /* AppDelegate.swift in Sources */,
 				BF41A4C6233AD54D000D2DBE /* FirstViewController.swift in Sources */,
+				BF2AF576233B5D130050A698 /* APIClient.swift in Sources */,
+				BF2AF579233B6DE70050A698 /* ServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
