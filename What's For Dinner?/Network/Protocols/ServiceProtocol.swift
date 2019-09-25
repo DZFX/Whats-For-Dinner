@@ -18,3 +18,17 @@ protocol ServiceProtocol {
     var headers: Headers? { get }
     var parametersEncoding: ParametersEncoding { get }
 }
+
+extension ServiceProtocol {
+    var baseURL: URL {
+        return URL(string: "https://developers.zomato.com/api/v2.1")!
+    }
+    
+    var headers: Headers? {
+        return ["user-key" : "75b8aa16761c73a97d0785463cadaf5a"]
+    }
+    
+    var parametersEncoding: ParametersEncoding {
+        return .url
+    }
+}

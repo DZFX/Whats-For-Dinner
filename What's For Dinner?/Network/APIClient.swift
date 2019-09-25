@@ -10,11 +10,25 @@ import Foundation
 
 class APIClient {
     
-    let urlSession: URLSession = {
-        let sessionConfiguration = URLSessionConfiguration.default
-        let urlSession = URLSession(configuration: sessionConfiguration)
-        return urlSession
-    }()
+    static let shared = APIClient()
     
+    private init() {}
+    
+    private let sessionProvider = URLSessionProvider()
+    
+    struct Restaurants {
+        
+        static func searchFromCurrentLocation() {
+            APIClient.shared.sessionProvider.request(type: [Restaurant].self,
+                                    service: SearchService.searchNearby(latitude: 37.3229978, longitude: -122.0321823)) { (response) in
+                                        switch response {
+                                        case let .failure(error):
+                                            print(error)
+                                        case let .success(restaurants):
+                                            print(restaurants)
+                                        }
+            }
+        }
+    }
     
 }

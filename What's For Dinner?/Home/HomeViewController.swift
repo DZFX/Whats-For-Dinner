@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  HomeViewController.swift
 //  What's For Dinner?
 //
 //  Created by Isaac Delgado on 9/24/19.
@@ -8,11 +8,14 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class HomeViewController: UIViewController {
+    
+    private let viewModel = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewModel.getNearbyRestaurants()
     }
 
 
