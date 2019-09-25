@@ -9,4 +9,5 @@
 enum NetworkError {
     case unknown
     case noJSONData
+    case error(Error)
 }

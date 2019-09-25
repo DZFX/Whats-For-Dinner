@@ -57,9 +57,9 @@ struct Restaurant: Decodable {
         thumb = try container.decodeIfPresent(String.self, forKey: .thumb)
         featuredImage = try container.decodeIfPresent(String.self, forKey: .featuredImage)
         userRating = try container.decodeIfPresent(UserRating.self, forKey: .userRating)
-        hasOnlineDelivery = try container.decodeIfPresent(Bool.self, forKey: .hasOnlineDelivery)
-        isDeliveringNow = try container.decodeIfPresent(Bool.self, forKey: .isDeliveringNow)
-        hasTableBooking = try container.decodeIfPresent(Bool.self, forKey: .hasTableBooking)
+        hasOnlineDelivery = (try container.decodeIfPresent(Int.self, forKey: .hasOnlineDelivery) ?? 0) == 1 ? true : false
+        isDeliveringNow = (try container.decodeIfPresent(Int.self, forKey: .isDeliveringNow) ?? 0) == 1 ? true : false
+        hasTableBooking = (try container.decodeIfPresent(Int.self, forKey: .hasTableBooking) ?? 0) == 1 ? true : false
         cuisines = try container.decodeIfPresent(String.self, forKey: .cuisines)
         allReviewsCount = try container.decodeIfPresent(Int.self, forKey: .allReviewsCount)
         phoneNumbers = try container.decodeIfPresent(String.self, forKey: .phoneNumbers)
@@ -72,16 +72,20 @@ struct Restaurant: Decodable {
             photos = nil
         }
         
-        if let reviewContainers = try container.decodeIfPresent([ReviewContainer].self, forKey: .allReviews) {
-            allReviews = reviewContainers.compactMap { $0.review}
+        if let allReviews = try container.decodeIfPresent(AllReviews.self, forKey: .allReviews) {
+            self.allReviews = allReviews.reviews?.compactMap { $0.review}
         } else {
-            allReviews = nil
+            self.allReviews = nil
         }
     }
 }
 
 struct PhotoContainer: Decodable {
     let photo: Photo
+}
+
+struct AllReviews: Decodable {
+    let reviews: [ReviewContainer]?
 }
 
 struct ReviewContainer: Decodable {

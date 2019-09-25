@@ -32,8 +32,14 @@ final class URLSessionProvider: ProviderProtocol {
         
         switch response.statusCode {
         case 200...299:
-            guard let data = data, let model = try? JSONDecoder().decode(T.self, from: data) else { return completion(.failure(.unknown)) }
-            completion(.success(model))
+            do {
+                guard let data = data else { return completion(.failure(.unknown)) }
+                let model = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(model))
+            } catch let e {
+                completion(.failure(.error(e)))
+            }
+            
         default:
             completion(.failure(.unknown))
         }
