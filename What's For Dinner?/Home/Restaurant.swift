@@ -23,6 +23,7 @@ struct Restaurant: Decodable {
     let allReviewsCount: Int?
     let phoneNumbers: String?
     let timings: String?
+    let highlights: [String]?
     let photoCount: Int?
     let photos: [Photo]?
     let allReviews: [Review]?
@@ -42,6 +43,7 @@ struct Restaurant: Decodable {
         case allReviewsCount = "all_reviews_count"
         case phoneNumbers = "phone_numbers"
         case timings
+        case highlights
         case photoCount = "photo_count"
         case photos
         case allReviews = "all_reviews"
@@ -73,6 +75,7 @@ struct Restaurant: Decodable {
         allReviewsCount = try container.decodeIfPresent(Int.self, forKey: .allReviewsCount)
         phoneNumbers = try container.decodeIfPresent(String.self, forKey: .phoneNumbers)
         timings = try container.decodeIfPresent(String.self, forKey: .timings)
+        highlights = try container.decodeIfPresent([String].self, forKey: .highlights)
         photoCount = try container.decodeIfPresent(Int.self, forKey: .photoCount)
         
         if let photoContainers = try container.decodeIfPresent([PhotoContainer].self, forKey: .photos) {

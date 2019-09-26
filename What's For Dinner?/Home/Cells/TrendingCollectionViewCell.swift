@@ -21,9 +21,6 @@ class TrendingCollectionViewCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 2.0
         contentView.layer.borderWidth = 2.0
         contentView.layer.borderColor = UIColor.lightGray.cgColor
-//        contentView.layer.shadowOpacity = 0.5
-//        contentView.layer.shadowRadius = 3.0
-//        contentView.layer.shadowOffset = CGSize(width: 3.0, height: 0.0)
     }
     
     override func prepareForReuse() {
@@ -32,9 +29,8 @@ class TrendingCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with restaurant: Restaurant) {
-        if let url = URL(string: restaurant.thumb ?? ""),
-            let data = try? Data(contentsOf: url) {
-            thumbImageView.image = UIImage(data: data)
+        if let thumbURLString = restaurant.thumb {
+            thumbImageView.downloadImage(from: thumbURLString)
         }
         restaurantNameLabel.text = restaurant.name
         ratingLabel.text = restaurant.userRating?.aggregateRating

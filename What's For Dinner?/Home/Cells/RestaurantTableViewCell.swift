@@ -28,9 +28,8 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     func configure(with restaurant: Restaurant) {
-        if let url = URL(string: restaurant.thumb ?? ""),
-            let data = try? Data(contentsOf: url) {
-            thumbImageView.image = UIImage(data: data)
+        if let thumbURLString = restaurant.thumb {
+            thumbImageView.downloadImage(from: thumbURLString)
         }
         restaurantNameLabel.text = restaurant.name
         ratingLabel.text = restaurant.userRating?.aggregateRating

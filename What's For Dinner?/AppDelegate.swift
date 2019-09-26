@@ -43,7 +43,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupCache() {
-        
+        let cacheSizeMegabytes = 30
+        URLCache.shared = URLCache(
+            memoryCapacity: cacheSizeMegabytes*1024*1024,
+            diskCapacity: 0,
+            diskPath: nil
+        )
+        URLSession.shared.configuration.urlCache = URLCache.shared
     }
 }
 
