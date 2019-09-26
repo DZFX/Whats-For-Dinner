@@ -18,6 +18,12 @@ class TrendingCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         thumbImageView.layer.cornerRadius = 1.5
+        contentView.layer.cornerRadius = 2.0
+        contentView.layer.borderWidth = 2.0
+        contentView.layer.borderColor = UIColor.lightGray.cgColor
+//        contentView.layer.shadowOpacity = 0.5
+//        contentView.layer.shadowRadius = 3.0
+//        contentView.layer.shadowOffset = CGSize(width: 3.0, height: 0.0)
     }
     
     override func prepareForReuse() {
