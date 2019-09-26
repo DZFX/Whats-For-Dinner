@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,9 +43,11 @@
 		BFAA574C233CA3F9000F9616 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA574B233CA3F9000F9616 /* RestaurantDetailViewController.swift */; };
 		BFAA574E233CA40A000F9616 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA574D233CA40A000F9616 /* RestaurantDetailViewModel.swift */; };
 		BFAA5750233CA6E0000F9616 /* RestaurantDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA574F233CA6E0000F9616 /* RestaurantDetailHeader.swift */; };
+		C3FB2B47802D420E8925F731 /* Pods_What_s_For_Dinner_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DA242444C01CD068AF5C37 /* Pods_What_s_For_Dinner_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50B633EDDDD4F563C4786472 /* Pods-What's For Dinner?.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-What's For Dinner?.debug.xcconfig"; path = "Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?.debug.xcconfig"; sourceTree = "<group>"; };
 		BF13B9D4233C55580055D028 /* GenericCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionDataSource.swift; sourceTree = "<group>"; };
 		BF13B9D6233C55650055D028 /* GenericCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionDelegate.swift; sourceTree = "<group>"; };
 		BF1CE88E233C339100365530 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -84,6 +86,8 @@
 		BFAA574B233CA3F9000F9616 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		BFAA574D233CA40A000F9616 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
 		BFAA574F233CA6E0000F9616 /* RestaurantDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeader.swift; sourceTree = "<group>"; };
+		C53E7E0498016EDF549BC7FE /* Pods-What's For Dinner?.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-What's For Dinner?.release.xcconfig"; path = "Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?.release.xcconfig"; sourceTree = "<group>"; };
+		E0DA242444C01CD068AF5C37 /* Pods_What_s_For_Dinner_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_What_s_For_Dinner_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +95,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FB2B47802D420E8925F731 /* Pods_What_s_For_Dinner_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F26AFA37C3EEAEF76A5BF83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50B633EDDDD4F563C4786472 /* Pods-What's For Dinner?.debug.xcconfig */,
+				C53E7E0498016EDF549BC7FE /* Pods-What's For Dinner?.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BF1CE890233C517F00365530 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +220,8 @@
 			children = (
 				BF41A4C2233AD54D000D2DBE /* What's For Dinner? */,
 				BF41A4C1233AD54D000D2DBE /* Products */,
+				7F26AFA37C3EEAEF76A5BF83 /* Pods */,
+				F1E5AE4233DC156388AAAB0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,6 +261,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		F1E5AE4233DC156388AAAB0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0DA242444C01CD068AF5C37 /* Pods_What_s_For_Dinner_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF41A4D4233AD54F000D2DBE /* Build configuration list for PBXNativeTarget "What's For Dinner?" */;
 			buildPhases = (
+				3C4A9B764FB18585870143A9 /* [CP] Check Pods Manifest.lock */,
 				BF41A4BC233AD54D000D2DBE /* Sources */,
 				BF41A4BD233AD54D000D2DBE /* Frameworks */,
 				BF41A4BE233AD54D000D2DBE /* Resources */,
+				93FB4957017C7C008164D3F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,7 +306,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF41A4BB233AD54D000D2DBE /* Build configuration list for PBXProject "What's For Dinner?" */;
+			buildConfigurationList = BF41A4BB233AD54D000D2DBE /* Build configuration list for PBXProject "What's For Dinner" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -310,6 +336,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C4A9B764FB18585870143A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-What's For Dinner?-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93FB4957017C7C008164D3F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF41A4BC233AD54D000D2DBE /* Sources */ = {
@@ -492,6 +560,7 @@
 		};
 		BF41A4D5233AD54F000D2DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50B633EDDDD4F563C4786472 /* Pods-What's For Dinner?.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +579,7 @@
 		};
 		BF41A4D6233AD54F000D2DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C53E7E0498016EDF549BC7FE /* Pods-What's For Dinner?.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,7 +599,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF41A4BB233AD54D000D2DBE /* Build configuration list for PBXProject "What's For Dinner?" */ = {
+		BF41A4BB233AD54D000D2DBE /* Build configuration list for PBXProject "What's For Dinner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF41A4D2233AD54F000D2DBE /* Debug */,

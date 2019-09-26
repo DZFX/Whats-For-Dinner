@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RestaurantTableViewCell: UITableViewCell {
 
@@ -28,8 +29,9 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     func configure(with restaurant: Restaurant) {
-        if let thumbURLString = restaurant.thumb {
-            thumbImageView.downloadImage(from: thumbURLString)
+        if let thumbURLString = restaurant.thumb,
+            let url = URL(string: thumbURLString) {
+            thumbImageView.kf.setImage(with: url)
         }
         restaurantNameLabel.text = restaurant.name
         ratingLabel.text = restaurant.userRating?.aggregateRating
