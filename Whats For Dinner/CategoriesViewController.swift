@@ -10,11 +10,20 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    // MARK: - Properties
     private var dataSource: GenericCollectionDataSource<Category, CategoryCollectionViewCell>?
     private var delegate: GenericCollectionDelegate?
     
     private let viewModel = CategoriesViewModel()
+    
+    // MARK: - Life cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +38,10 @@ class CategoriesViewController: UIViewController {
                                                                                        configurationBlock: { (cell, category) in
                                                                                         cell.configure(with: category)
         })
-        delegate = GenericCollectionDelegate(selectionAction: { (indexPath) in
-            // action
+        delegate = GenericCollectionDelegate(selectionAction: { [weak self] (indexPath) in
+            guard let `self` = self,
+                let category = self.dataSource?.data[indexPath.row] else { return }
+            self.openCategory(category)
         })
         
         collectionView.dataSource = dataSource
@@ -52,6 +63,13 @@ class CategoriesViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    // MARK: - User actions
+    private func openCategory(_ category: Category) {
+        guard let restaurantsVC = RestaurantsViewController.instantiateFromStoryboard() as? RestaurantsViewController else { return }
+        restaurantsVC.setCategory(category)
+        navigationController?.pushViewController(restaurantsVC, animated: true)
     }
 }
 

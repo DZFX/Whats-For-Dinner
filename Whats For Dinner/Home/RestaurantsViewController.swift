@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  RestaurantsViewController.swift
 //  What's For Dinner?
 //
 //  Created by Isaac Delgado on 9/24/19.
@@ -8,30 +8,60 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class RestaurantsViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var trendingView: UIView!
+    @IBOutlet weak var nearLabel: UILabel!
+    @IBOutlet weak var nearView: UIView!
     
-    private let viewModel = HomeViewModel()
+    // MARK: - Private properties
+    private let viewModel = RestaurantsViewModel()
     private var tableDataSource: GenericTableDataSource<Restaurant, RestaurantTableViewCell>?
     private var tableDelegate: GenericTableViewDelegate?
     
     private var collectionDataSource: GenericCollectionDataSource<Restaurant, TrendingCollectionViewCell>?
     private var collectionDelegate: GenericCollectionDelegate?
+    private var displayTrending: Bool = true
+    
+    func setCategory(_ category: Category) {
+        title = category.name
+        displayTrending = false
+        viewModel.category = category
+    }
 
+    // MARK: - Life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        if displayTrending {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        } else {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
-        setupCollectionView()
-        retrieveRestaurants()
-        retrieveTrending()
+        
+        if displayTrending {
+            setupCollectionView()
+        } else {
+            hideTrending()
+        }
+        
+        viewModel.attemptGetUserLocation { [weak self] in
+            guard let `self` = self else { return }
+            
+            self.retrieveRestaurants()
+            if self.displayTrending {
+                self.retrieveTrending()
+            }
+        }
     }
 
     // MARK: - Config
@@ -68,6 +98,16 @@ class HomeViewController: UIViewController {
         
         collectionView.dataSource = collectionDataSource
         collectionView.delegate = collectionDelegate
+    }
+    
+    private func hideTrending() {
+        nearLabel.isHidden = true
+        trendingView.subviews.forEach { (view) in
+            view.isHidden = true
+        }
+        trendingView.heightAnchor.constraint(equalToConstant: 0.0).isActive = true
+        tableView.topAnchor.constraint(equalTo: nearView.topAnchor).isActive = true
+        view.setNeedsLayout()
     }
     
     // MARK: - Network actions

@@ -51,5 +51,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Find places to eat near you. You can always change this setting from the Settings App &gt; Privacy &gt; Location Services</string>
 </dict>
 </plist>

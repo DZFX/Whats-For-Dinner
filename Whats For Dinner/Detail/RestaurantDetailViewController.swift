@@ -83,12 +83,9 @@ extension RestaurantDetailViewController: UITableViewDataSource {
             cell.textLabel?.text = viewModel.highlight(row: indexPath.row)
             cell.accessoryType = .checkmark
         }
-        
-        
+
         return cell
     }
-    
-    
 }
 
 extension RestaurantDetailViewController: UITableViewDelegate {

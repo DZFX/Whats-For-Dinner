@@ -12,10 +12,11 @@ enum SearchService: ServiceProtocol {
     
     case searchNearby(latitude: Double, longitude: Double)
     case trending(latitude: Double, longitude: Double)
+    case byCategory(categoryID: Int, latitude: Double, longitude: Double)
     
     var path: String {
         switch self {
-        case .searchNearby, .trending:
+        case .searchNearby, .trending, .byCategory:
             return "/search"
         }
     }
@@ -42,6 +43,16 @@ enum SearchService: ServiceProtocol {
                 "lon": longitude,
                 "radius": "3000",
                 "collection_id": 1,
+                "sort": "rating",
+                "order": "desc"
+            ]
+            return .requestParameters(parameters)
+            
+        case let .byCategory(categoryID, latitude, longitude):
+            let parameters: [String: Any] = [
+                "category": categoryID,
+                "lat": latitude,
+                "lon": longitude,
                 "sort": "rating",
                 "order": "desc"
             ]
