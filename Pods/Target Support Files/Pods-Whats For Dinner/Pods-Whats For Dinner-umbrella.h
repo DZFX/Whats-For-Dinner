@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_What_s_For_Dinner_VersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_What_s_For_Dinner_VersionString[];
+FOUNDATION_EXPORT double Pods_Whats_For_DinnerVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Whats_For_DinnerVersionString[];
 

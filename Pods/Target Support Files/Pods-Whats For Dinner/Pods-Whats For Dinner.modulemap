@@ -1,0 +1,6 @@
+framework module Pods_Whats_For_Dinner {
+  umbrella header "Pods-Whats For Dinner-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00B48FBC95D04AEA853B9AE665D1E8E1 /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B88C3D60C34686BFE89B30F1875BCE /* ImageFormat.swift */; };
 		041EB9FA2DCEE0A038C416616616D8A4 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564277698B131DA03409CC523426422D /* Placeholder.swift */; };
-		05B72FF6EE8D06ACDC127B1568F733BA /* Pods-What's For Dinner?-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E374C443EE83D92865B2F9421EEDAD39 /* Pods-What's For Dinner?-dummy.m */; };
 		07C8948559CCE74CFE5903D4B9C858BD /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E79E315E13EB0D6CF6C557A7F0D899A /* ExtensionHelpers.swift */; };
 		092C84399199A063781DAF6713C7ADE3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4C79309C97AF5E730C8DC5C51A84D /* ImageCache.swift */; };
+		1297CD5F7B3A13ED26C486AC78D5D204 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */; };
 		1388453A0BFFADA63CDB60C211FDEA89 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6D3DCAFE0A615F54A20C8D0C294AF /* ImageTransition.swift */; };
 		14AA684EBDBF925E4AC4D118F69A846B /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F790D3DF065503F591E12E5109820505 /* Filter.swift */; };
 		1B14B0AFAD836E3694F74730177DAE30 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E979F51BCDA58CC84984EE77237AC /* Kingfisher-dummy.m */; };
@@ -31,6 +31,7 @@
 		5D4759FF7D34320BC1BFE3171BD83250 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 06925D1BB858852D36CBC110DE6A2277 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D8B461677B082D9B12243AF68D7D329 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3614D97C86219A710DDEF4BC7FA0E /* RequestModifier.swift */; };
 		5FAD8CAA06794CE892404AD9C408DF19 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D475C9E3E8965A4385F4A28E11EB5E85 /* ImageProcessor.swift */; };
+		62158E396EA33994B6EB19922B8016F7 /* Pods-Whats For Dinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C081D8BDC0F30D7CD81FB3A6F95A44CF /* Pods-Whats For Dinner-dummy.m */; };
 		67776A8ED6E3B931649AD03090E61BBC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C9CC46C04B908FF8708A6DE7FF5419 /* Accelerate.framework */; };
 		696DE0303F71171A3E4A9C4258F0A5D5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9F953EC87A827408298A8B7CC1F7AE /* Image.swift */; };
 		6B3C32A5B5296C6B58EEADA1330717EB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4439BCA8312E4998EABBB5B2F5D9C8D4 /* CFNetwork.framework */; };
@@ -41,10 +42,9 @@
 		7A55B0BE93922D01082931F8C242A226 /* SizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603175EBD594C09D59D80D45F304E2C9 /* SizeExtensions.swift */; };
 		7CB51C5EE5EB410D843BE8EA48779F71 /* ImageDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3B6F7D6945FE6DBACAABBD7BC229C /* ImageDataProcessor.swift */; };
 		7DF6286BF0B2C0A02498CA9D22D9FD45 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A4DB1B5EA775EC0309D994148BB332 /* Kingfisher.swift */; };
-		83E54CDB3E7194D8AA676D2F4320DD30 /* Pods-What's For Dinner?-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2F26DB0981E309CF48EFA60221710B /* Pods-What's For Dinner?-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83F252A836C0DECD4A2DB3FD1F28E31A /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450DF9065F8E291BAD9672243CD2A3C /* RedirectHandler.swift */; };
 		8538DA93E20F89D2DAB447709057427B /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7DCDB60E3CD84A1404A2E0B0A18C7 /* Delegate.swift */; };
-		9F95526CDA4B4C696617872F2B92BEF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */; };
+		8C4A0EA03F86BDF9D2DD056B5A36D690 /* Pods-Whats For Dinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86841705CF00032AA8D3C576CDF49A99 /* Pods-Whats For Dinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A01D0E20E670C29E4F36C0EAB9C96D8A /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA433D81757F54CAE2211E6D3B4FAB5 /* Storage.swift */; };
 		A3765576E13E2188F1C8AD16104360A8 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4D18562B1F2603109FB29539B952B /* MemoryStorage.swift */; };
 		AC31ABEB2D79702FFF36FB01F7157DDA /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534DC61FFD8CE7ADE2BBFF22AB9417D /* ImageDownloader.swift */; };
@@ -64,7 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		58D2BC6062BDE85C06F31B4976D7546B /* PBXContainerItemProxy */ = {
+		0D06FFB0710615C0FC62DCC1757DA9F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -74,28 +74,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03C325F3B3D2436827B49068DD376A89 /* Pods-What's For Dinner?-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-What's For Dinner?-frameworks.sh"; sourceTree = "<group>"; };
+		04E2B17C74004E668B0A3974A5767A20 /* Pods-Whats For Dinner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Whats For Dinner-Info.plist"; sourceTree = "<group>"; };
 		06925D1BB858852D36CBC110DE6A2277 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		0BFD637F6054C8E0BD29EC29CD98C2DD /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
-		0CCF46B63D39D7B505BCDBADFFB14DD5 /* Pods-What's For Dinner?.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-What's For Dinner?.modulemap"; sourceTree = "<group>"; };
 		0ED293611EEF7E3EA5FC6D87487C4CDE /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = Sources/Networking/SessionDataTask.swift; sourceTree = "<group>"; };
+		12817D24159012ADDBA6B25534D37407 /* Pods-Whats For Dinner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Whats For Dinner.release.xcconfig"; sourceTree = "<group>"; };
 		16C568EB5D7B306D583DE0E00990D0D8 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
 		18C7DCDB60E3CD84A1404A2E0B0A18C7 /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/Utility/Delegate.swift; sourceTree = "<group>"; };
 		1BA433D81757F54CAE2211E6D3B4FAB5 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
+		1C2BA4EC92461D2161A83F0C71205ED7 /* Pods-Whats For Dinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Whats For Dinner.modulemap"; sourceTree = "<group>"; };
 		1CFF5057078BFA55BAAECDD1AB6ED74B /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Views/Indicator.swift; sourceTree = "<group>"; };
-		21A77F7C5C34ABB506933852200B04DF /* Pods-What's For Dinner?-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-What's For Dinner?-acknowledgements.plist"; sourceTree = "<group>"; };
 		26F43A66582A19A12D32A635A0FE3646 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		2B57C775790ABD0DCAC7971792DB5FA1 /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
-		2FA14081D1F8311B532F49FDAC2E30C1 /* Pods_What_s_For_Dinner_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_What_s_For_Dinner_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D92859C746980C2499BA19D5AFDF6C3 /* Pods-What's For Dinner?-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-What's For Dinner?-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2C25D7ECB79446DFE09465157D129BEE /* Pods-Whats For Dinner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Whats For Dinner-acknowledgements.plist"; sourceTree = "<group>"; };
 		4439BCA8312E4998EABBB5B2F5D9C8D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		48C9CC46C04B908FF8708A6DE7FF5419 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		494C5DC712140549510B6F8BD785911D /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
 		49D8B357489EFD798A80CB1C0056A4FA /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/General/Deprecated.swift; sourceTree = "<group>"; };
 		4B2B2D4475075536A24EA894B13642B7 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		4BB6D3DCAFE0A615F54A20C8D0C294AF /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/Image/ImageTransition.swift; sourceTree = "<group>"; };
+		4FB69580023CE292F232689A27B5E99E /* Pods-Whats For Dinner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Whats For Dinner-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5084878DC7658D1C8F0D24F9DF110E07 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
 		530486E5B2E1A576BB688EE7E66B9B12 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/Extensions/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		55E2ADB69694BB88FEE27653BD32A225 /* Pods_Whats_For_Dinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Whats_For_Dinner.framework; path = "Pods-Whats For Dinner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		564277698B131DA03409CC523426422D /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Image/Placeholder.swift; sourceTree = "<group>"; };
 		57B88C3D60C34686BFE89B30F1875BCE /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
 		5BECA832319A1E6F1552796A929E34F1 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Utility/String+MD5.swift"; sourceTree = "<group>"; };
@@ -105,37 +106,36 @@
 		7031C40A6606617901E2C032EE5CA68F /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
 		729DDC4F78A85727CABCDDA697E9FDCF /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
 		73F7044A09AA8A2EBD61F34243A9BBC9 /* ImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProvider.swift; path = Sources/General/ImageSource/ImageDataProvider.swift; sourceTree = "<group>"; };
+		75DC840EA0687E71E740BD5FF443673D /* Pods-Whats For Dinner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Whats For Dinner.debug.xcconfig"; sourceTree = "<group>"; };
 		7E79E315E13EB0D6CF6C557A7F0D899A /* ExtensionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionHelpers.swift; path = Sources/Utility/ExtensionHelpers.swift; sourceTree = "<group>"; };
 		7F59ADADC19FB1135F4824C7D1EB016A /* AuthenticationChallengeResponsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeResponsable.swift; path = Sources/Networking/AuthenticationChallengeResponsable.swift; sourceTree = "<group>"; };
 		82679051652D18304D43568B7F540DCF /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
 		8450DF9065F8E291BAD9672243CD2A3C /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
+		86841705CF00032AA8D3C576CDF49A99 /* Pods-Whats For Dinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Whats For Dinner-umbrella.h"; sourceTree = "<group>"; };
 		8AD2E919CE6C719E1481761A11D9118C /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/Views/AnimatedImageView.swift; sourceTree = "<group>"; };
 		8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		912CAAA418FD5E726FAB83FE3EACFDAE /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/General/KingfisherManager.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA86CA8A7EEFF4197395EB1E183D58BD /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		AAC0DDD6AB27331D4B13D28B3457209F /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		B5C3B6F7D6945FE6DBACAABBD7BC229C /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
 		B7CCFB0A80DE708D1524F8A65B6FB358 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
 		B91033AEDB0636D959280105930D1AC5 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Sources/Networking/SessionDelegate.swift; sourceTree = "<group>"; };
-		BDE36AB66230FD1336364D6B7D6DD204 /* Pods-What's For Dinner?-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-What's For Dinner?-Info.plist"; sourceTree = "<group>"; };
-		BE6D1E8F74A48F28C8A8A7D448C7965B /* Pods-What's For Dinner?.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-What's For Dinner?.debug.xcconfig"; sourceTree = "<group>"; };
+		C081D8BDC0F30D7CD81FB3A6F95A44CF /* Pods-Whats For Dinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Whats For Dinner-dummy.m"; sourceTree = "<group>"; };
 		C2D9B98E7B22B782CB828C2D1D50064E /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
-		C31C8C0970AA88E41AC0E7DEA877F9F6 /* Pods-What's For Dinner?.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-What's For Dinner?.release.xcconfig"; sourceTree = "<group>"; };
-		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C534DC61FFD8CE7ADE2BBFF22AB9417D /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
 		C66E2A62BB54C85F4D62B7894F4AE4ED /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
 		C7DA9D5CE7DE397B4725BDCA86F61B01 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		CD857207E49094F7BE8C31D056ED2034 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
 		CDF4C79309C97AF5E730C8DC5C51A84D /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
 		D475C9E3E8965A4385F4A28E11EB5E85 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
+		D8A13B61D5AAE79BB0EC5B38A8FA92D8 /* Pods-Whats For Dinner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Whats For Dinner-frameworks.sh"; sourceTree = "<group>"; };
 		DCB4D18562B1F2603109FB29539B952B /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
-		E374C443EE83D92865B2F9421EEDAD39 /* Pods-What's For Dinner?-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-What's For Dinner?-dummy.m"; sourceTree = "<group>"; };
 		E6A4DB1B5EA775EC0309D994148BB332 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
 		ECB3614D97C86219A710DDEF4BC7FA0E /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
 		F6BF45C818C627946CA4BA681D76629C /* Runtime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = Sources/Utility/Runtime.swift; sourceTree = "<group>"; };
 		F790D3DF065503F591E12E5109820505 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Image/Filter.swift; sourceTree = "<group>"; };
-		FA2F26DB0981E309CF48EFA60221710B /* Pods-What's For Dinner?-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-What's For Dinner?-umbrella.h"; sourceTree = "<group>"; };
 		FA83B7D9210863527B101AFCBF42D06A /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
 		FA995D4CD93A651C8E3B78CE43451098 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
 		FCF1938C8B1E0898D19CB5935E2C384B /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
@@ -144,11 +144,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A6C701075758877A840340A37B89DF05 /* Frameworks */ = {
+		8F694722265D16773D4FC43CE3B91FA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F95526CDA4B4C696617872F2B92BEF8 /* Foundation.framework in Frameworks */,
+				1297CD5F7B3A13ED26C486AC78D5D204 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,31 +171,6 @@
 				F4EDCEE8FA60C58BE6C758D9C25D78AE /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		40229101FE20D8FB0A643E4E3735AD66 /* Pods-What's For Dinner? */ = {
-			isa = PBXGroup;
-			children = (
-				0CCF46B63D39D7B505BCDBADFFB14DD5 /* Pods-What's For Dinner?.modulemap */,
-				3D92859C746980C2499BA19D5AFDF6C3 /* Pods-What's For Dinner?-acknowledgements.markdown */,
-				21A77F7C5C34ABB506933852200B04DF /* Pods-What's For Dinner?-acknowledgements.plist */,
-				E374C443EE83D92865B2F9421EEDAD39 /* Pods-What's For Dinner?-dummy.m */,
-				03C325F3B3D2436827B49068DD376A89 /* Pods-What's For Dinner?-frameworks.sh */,
-				BDE36AB66230FD1336364D6B7D6DD204 /* Pods-What's For Dinner?-Info.plist */,
-				FA2F26DB0981E309CF48EFA60221710B /* Pods-What's For Dinner?-umbrella.h */,
-				BE6D1E8F74A48F28C8A8A7D448C7965B /* Pods-What's For Dinner?.debug.xcconfig */,
-				C31C8C0970AA88E41AC0E7DEA877F9F6 /* Pods-What's For Dinner?.release.xcconfig */,
-			);
-			name = "Pods-What's For Dinner?";
-			path = "Target Support Files/Pods-What's For Dinner?";
-			sourceTree = "<group>";
-		};
-		7E482E83505DFF047BBF343A5BFEE00B /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				40229101FE20D8FB0A643E4E3735AD66 /* Pods-What's For Dinner? */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		9A2B63DB998DBA33AFEEA30072D8FA90 /* Kingfisher */ = {
@@ -249,16 +224,8 @@
 				530486E5B2E1A576BB688EE7E66B9B12 /* UIButton+Kingfisher.swift */,
 				BFF0DE6DDE2547914C19223817497260 /* Support Files */,
 			);
+			name = Kingfisher;
 			path = Kingfisher;
-			sourceTree = "<group>";
-		};
-		AEE2A6D00FBBAC2AAEFA7AC6CC4ED32B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
-				2FA14081D1F8311B532F49FDAC2E30C1 /* Pods_What_s_For_Dinner_.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BFF0DE6DDE2547914C19223817497260 /* Support Files */ = {
@@ -275,14 +242,40 @@
 			path = "../Target Support Files/Kingfisher";
 			sourceTree = "<group>";
 		};
+		C2A06C18209C96D542DDFC17F04174E6 /* Pods-Whats For Dinner */ = {
+			isa = PBXGroup;
+			children = (
+				1C2BA4EC92461D2161A83F0C71205ED7 /* Pods-Whats For Dinner.modulemap */,
+				4FB69580023CE292F232689A27B5E99E /* Pods-Whats For Dinner-acknowledgements.markdown */,
+				2C25D7ECB79446DFE09465157D129BEE /* Pods-Whats For Dinner-acknowledgements.plist */,
+				C081D8BDC0F30D7CD81FB3A6F95A44CF /* Pods-Whats For Dinner-dummy.m */,
+				D8A13B61D5AAE79BB0EC5B38A8FA92D8 /* Pods-Whats For Dinner-frameworks.sh */,
+				04E2B17C74004E668B0A3974A5767A20 /* Pods-Whats For Dinner-Info.plist */,
+				86841705CF00032AA8D3C576CDF49A99 /* Pods-Whats For Dinner-umbrella.h */,
+				75DC840EA0687E71E740BD5FF443673D /* Pods-Whats For Dinner.debug.xcconfig */,
+				12817D24159012ADDBA6B25534D37407 /* Pods-Whats For Dinner.release.xcconfig */,
+			);
+			name = "Pods-Whats For Dinner";
+			path = "Target Support Files/Pods-Whats For Dinner";
+			sourceTree = "<group>";
+		};
+		CBDDCC1755B8C8C864C3750D8FA5524D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				55E2ADB69694BB88FEE27653BD32A225 /* Pods_Whats_For_Dinner.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				D92A1AC6AB2D7B5E9CFAF4BAE5B71804 /* Pods */,
-				AEE2A6D00FBBAC2AAEFA7AC6CC4ED32B /* Products */,
-				7E482E83505DFF047BBF343A5BFEE00B /* Targets Support Files */,
+				CBDDCC1755B8C8C864C3750D8FA5524D /* Products */,
+				EC3E8EDF044A8FCD03EC03B94ACDAD0F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,6 +285,14 @@
 				9A2B63DB998DBA33AFEEA30072D8FA90 /* Kingfisher */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC3E8EDF044A8FCD03EC03B94ACDAD0F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2A06C18209C96D542DDFC17F04174E6 /* Pods-Whats For Dinner */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		F4EDCEE8FA60C58BE6C758D9C25D78AE /* iOS */ = {
@@ -307,14 +308,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7D7854BD816674127AFB4E003C3F33BD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83E54CDB3E7194D8AA676D2F4320DD30 /* Pods-What's For Dinner?-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE1843D8294075737CB8B327FC154AEE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,26 +317,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C098B221287AF0C8B102E20783306706 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4A0EA03F86BDF9D2DD056B5A36D690 /* Pods-Whats For Dinner-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		93DD50A8681A219F2722BAAE6772DD4C /* Pods-What's For Dinner? */ = {
+		1716D08291377523FE1F6897EB47B13D /* Pods-Whats For Dinner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95462DF52E7A85F917479FCE47E2F95B /* Build configuration list for PBXNativeTarget "Pods-What's For Dinner?" */;
+			buildConfigurationList = 6EB68D94238AF0A38C583A67BDAA166B /* Build configuration list for PBXNativeTarget "Pods-Whats For Dinner" */;
 			buildPhases = (
-				7D7854BD816674127AFB4E003C3F33BD /* Headers */,
-				03377ED93EED7B8C0850C46EEE8C68A0 /* Sources */,
-				A6C701075758877A840340A37B89DF05 /* Frameworks */,
-				B96A74D832414401954BEA775B51882E /* Resources */,
+				C098B221287AF0C8B102E20783306706 /* Headers */,
+				87BA3B18D91193C4B3F6A139AABDE75C /* Sources */,
+				8F694722265D16773D4FC43CE3B91FA9 /* Frameworks */,
+				E471E6ECBE855DD0E33805F30D855577 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3DE90C3F6AD83D66328B23D41D4FC739 /* PBXTargetDependency */,
+				F3783D56BD94EAB9C5ED17D8FBED5BDE /* PBXTargetDependency */,
 			);
-			name = "Pods-What's For Dinner?";
-			productName = "Pods-What's For Dinner?";
-			productReference = 2FA14081D1F8311B532F49FDAC2E30C1 /* Pods_What_s_For_Dinner_.framework */;
+			name = "Pods-Whats For Dinner";
+			productName = "Pods-Whats For Dinner";
+			productReference = 55E2ADB69694BB88FEE27653BD32A225 /* Pods_Whats_For_Dinner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
@@ -374,19 +375,19 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = AEE2A6D00FBBAC2AAEFA7AC6CC4ED32B /* Products */;
+			productRefGroup = CBDDCC1755B8C8C864C3750D8FA5524D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */,
-				93DD50A8681A219F2722BAAE6772DD4C /* Pods-What's For Dinner? */,
+				1716D08291377523FE1F6897EB47B13D /* Pods-Whats For Dinner */,
 			);
 		};
 /* End PBXProject section */
@@ -399,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B96A74D832414401954BEA775B51882E /* Resources */ = {
+		E471E6ECBE855DD0E33805F30D855577 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,65 +463,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03377ED93EED7B8C0850C46EEE8C68A0 /* Sources */ = {
+		87BA3B18D91193C4B3F6A139AABDE75C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B72FF6EE8D06ACDC127B1568F733BA /* Pods-What's For Dinner?-dummy.m in Sources */,
+				62158E396EA33994B6EB19922B8016F7 /* Pods-Whats For Dinner-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3DE90C3F6AD83D66328B23D41D4FC739 /* PBXTargetDependency */ = {
+		F3783D56BD94EAB9C5ED17D8FBED5BDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kingfisher;
 			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
-			targetProxy = 58D2BC6062BDE85C06F31B4976D7546B /* PBXContainerItemProxy */;
+			targetProxy = 0D06FFB0710615C0FC62DCC1757DA9F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0AAA487BAFF8CEC8C1881278B95E1BC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C31C8C0970AA88E41AC0E7DEA877F9F6 /* Pods-What's For Dinner?.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -614,7 +576,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -623,9 +584,9 @@
 			};
 			name = Release;
 		};
-		C7F0CDCB0D95DE94934ADDDDA8E7B673 /* Debug */ = {
+		AFAFA37EBDEF1FF7DE3B99804195EF2A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE6D1E8F74A48F28C8A8A7D448C7965B /* Pods-What's For Dinner?.debug.xcconfig */;
+			baseConfigurationReference = 75DC840EA0687E71E740BD5FF443673D /* Pods-Whats For Dinner.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -638,7 +599,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Whats For Dinner/Pods-Whats For Dinner-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,7 +608,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-What's For Dinner?/Pods-What's For Dinner?.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Whats For Dinner/Pods-Whats For Dinner.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -660,6 +621,45 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		C8A005EBDB564845490CD4ACC7F03752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12817D24159012ADDBA6B25534D37407 /* Pods-Whats For Dinner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Whats For Dinner/Pods-Whats For Dinner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Whats For Dinner/Pods-Whats For Dinner.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		D3C85F45DB51A8C745560E614E4E0F4D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -690,7 +690,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -770,11 +769,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95462DF52E7A85F917479FCE47E2F95B /* Build configuration list for PBXNativeTarget "Pods-What's For Dinner?" */ = {
+		6EB68D94238AF0A38C583A67BDAA166B /* Build configuration list for PBXNativeTarget "Pods-Whats For Dinner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C7F0CDCB0D95DE94934ADDDDA8E7B673 /* Debug */,
-				0AAA487BAFF8CEC8C1881278B95E1BC9 /* Release */,
+				AFAFA37EBDEF1FF7DE3B99804195EF2A /* Debug */,
+				C8A005EBDB564845490CD4ACC7F03752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
