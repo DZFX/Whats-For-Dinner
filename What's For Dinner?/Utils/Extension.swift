@@ -13,8 +13,12 @@ extension UIViewController {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
         
-        for action in actions {
-            alertController.addAction(action)
+        if actions.isEmpty {
+            alertController.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        } else {
+            for action in actions {
+                alertController.addAction(action)
+            }
         }
         
         return alertController

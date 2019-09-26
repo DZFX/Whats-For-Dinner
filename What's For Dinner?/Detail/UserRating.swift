@@ -20,5 +20,32 @@ struct UserRating: Decodable {
         case ratingColor = "rating_color"
         case votes
     }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        do {
+            aggregateRating = try container.decodeIfPresent(String.self, forKey: .aggregateRating)
+        } catch DecodingError.typeMismatch { // Workaround as API sometimes returns some values as numbers instead of Strings
+            if let intRating = try container.decodeIfPresent(Int.self, forKey: .aggregateRating) {
+                aggregateRating = "\(intRating)"
+            } else {
+                aggregateRating = nil
+            }
+        }
+        
+        ratingText = try container.decodeIfPresent(String.self, forKey: .ratingText)
+        ratingColor = try container.decodeIfPresent(String.self, forKey: .ratingColor)
+        
+        do {
+            votes = try container.decodeIfPresent(String.self, forKey: .votes)
+        } catch DecodingError.typeMismatch {
+            if let intVotes = try container.decodeIfPresent(Int.self, forKey: .votes) {
+                votes = "\(intVotes)"
+            } else {
+                votes = nil
+            }
+        }
+    }
 }
 

@@ -50,7 +50,16 @@ struct Restaurant: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        id = try container.decodeIfPresent(String.self, forKey: .id)
+        do {
+            id = try container.decodeIfPresent(String.self, forKey: .id)
+        } catch DecodingError.typeMismatch { // Workaround as API returns some IDs as numbers instead of Strings in case of a 'trending' search
+            if let intID = try container.decodeIfPresent(Int.self, forKey: .id) {
+                id = "\(intID)"
+            } else {
+                id = nil
+            }
+        }
+        
         name = try container.decodeIfPresent(String.self, forKey: .name)
         url = try container.decodeIfPresent(String.self, forKey: .url)
         location = try container.decodeIfPresent(Location.self, forKey: .location)

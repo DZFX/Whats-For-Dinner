@@ -18,17 +18,28 @@ class APIClient {
     
     struct Restaurants {
         
-        static func searchFromCurrentLocation(completion: @escaping (Result<[Restaurant], Error>) -> Void) {
+        static func searchFromCoordinates(latitude: Double, longitude: Double, completion: @escaping (Result<[Restaurant], Error>) -> Void) {
             APIClient.shared.sessionProvider.request(type: SearchResponse.self,
-                                    service: SearchService.searchNearby(latitude: 37.3229978, longitude: -122.0321823)) { (response) in
-                                        switch response {
-                                        case let .failure(error):
-                                            completion(.failure(error))
-                                        case let .success(restaurants):
-                                            completion(.success(restaurants.restaurants ?? []))
-                                        }
+                                                     service: SearchService.searchNearby(latitude: latitude, longitude: longitude)) { (response) in
+                                                        switch response {
+                                                        case let .failure(error):
+                                                            completion(.failure(error))
+                                                        case let .success(restaurants):
+                                                            completion(.success(restaurants.restaurants ?? []))
+                                                        }
+            }
+        }
+        
+        static func retrieveTrendingFromCoordinates(latitude: Double, longitude: Double, completion: @escaping (Result<[Restaurant], Error>) -> Void) {
+            APIClient.shared.sessionProvider.request(type: SearchResponse.self,
+                                                     service: SearchService.trending(latitude: 37.3229978, longitude: -122.0321823)) { (response) in
+                                                        switch response {
+                                                        case let .failure(error):
+                                                            completion(.failure(error))
+                                                        case let .success(restaurants):
+                                                            completion(.success(restaurants.restaurants ?? []))
+                                                        }
             }
         }
     }
-    
 }

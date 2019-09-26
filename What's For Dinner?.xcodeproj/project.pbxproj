@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF13B9D5233C55580055D028 /* GenericCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13B9D4233C55580055D028 /* GenericCollectionDataSource.swift */; };
+		BF13B9D7233C55650055D028 /* GenericCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13B9D6233C55650055D028 /* GenericCollectionDelegate.swift */; };
 		BF1CE88F233C339100365530 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE88E233C339100365530 /* Extension.swift */; };
+		BF1CE893233C51DB00365530 /* TrendingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE892233C51DB00365530 /* TrendingCollectionViewCell.swift */; };
 		BF2AF56D233B4F620050A698 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF56C233B4F620050A698 /* Review.swift */; };
 		BF2AF56F233B4F6B0050A698 /* UserRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF56E233B4F6B0050A698 /* UserRating.swift */; };
 		BF2AF571233B4F720050A698 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF570233B4F720050A698 /* Photo.swift */; };
@@ -35,16 +38,19 @@
 		BF68FE2E233BD22000B217C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE2D233BD22000B217C8 /* HomeViewModel.swift */; };
 		BF68FE30233BDBF600B217C8 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE2F233BDBF600B217C8 /* SearchResponse.swift */; };
 		BF68FE32233BEEFD00B217C8 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE31233BEEFD00B217C8 /* RestaurantTableViewCell.swift */; };
-		BF68FE34233C238900B217C8 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE33233C238900B217C8 /* GenericDataSource.swift */; };
+		BF68FE34233C238900B217C8 /* GenericTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE33233C238900B217C8 /* GenericTableDataSource.swift */; };
 		BF68FE36233C24CE00B217C8 /* GenericTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF13B9D4233C55580055D028 /* GenericCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionDataSource.swift; sourceTree = "<group>"; };
+		BF13B9D6233C55650055D028 /* GenericCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionDelegate.swift; sourceTree = "<group>"; };
 		BF1CE88E233C339100365530 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		BF1CE892233C51DB00365530 /* TrendingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF2AF56C233B4F620050A698 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		BF2AF56E233B4F6B0050A698 /* UserRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRating.swift; sourceTree = "<group>"; };
 		BF2AF570233B4F720050A698 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		BF2AF572233B54950050A698 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BF2AF572233B54950050A698 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../Location.swift; sourceTree = "<group>"; };
 		BF2AF575233B5D130050A698 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BF2AF578233B6DE70050A698 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		BF2AF57A233B6E370050A698 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -66,11 +72,11 @@
 		BF41A4CC233AD54E000D2DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF41A4CF233AD54F000D2DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF41A4D1233AD54F000D2DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF41A4D8233B3609000D2DBE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		BF41A4D8233B3609000D2DBE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = ../Restaurant.swift; sourceTree = "<group>"; };
 		BF68FE2D233BD22000B217C8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BF68FE2F233BDBF600B217C8 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		BF68FE31233BEEFD00B217C8 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
-		BF68FE33233C238900B217C8 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		BF68FE33233C238900B217C8 /* GenericTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableDataSource.swift; sourceTree = "<group>"; };
 		BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +91,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1CE890233C517F00365530 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF68FE31233BEEFD00B217C8 /* RestaurantTableViewCell.swift */,
+				BF1CE892233C51DB00365530 /* TrendingCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BF1CE891233C51BA00365530 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF41A4D8233B3609000D2DBE /* Restaurant.swift */,
+				BF2AF572233B54950050A698 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF1CE894233C522400365530 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BF13B9D4233C55580055D028 /* GenericCollectionDataSource.swift */,
+				BF13B9D6233C55650055D028 /* GenericCollectionDelegate.swift */,
+				BF68FE33233C238900B217C8 /* GenericTableDataSource.swift */,
+				BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */,
+				BF1CE88E233C339100365530 /* Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BF2AF56B233B4F4A0050A698 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,18 +211,16 @@
 		BF41A4C2233AD54D000D2DBE /* What's For Dinner? */ = {
 			isa = PBXGroup;
 			children = (
+				BF1CE894233C522400365530 /* Utils */,
 				BF2AF574233B5CFC0050A698 /* Network */,
 				BF2AF56B233B4F4A0050A698 /* Detail */,
 				BF41A4D7233ADDE7000D2DBE /* Home */,
 				BF41A4C3233AD54D000D2DBE /* AppDelegate.swift */,
 				BF41A4C7233AD54D000D2DBE /* SecondViewController.swift */,
-				BF1CE88E233C339100365530 /* Extension.swift */,
 				BF41A4C9233AD54D000D2DBE /* Main.storyboard */,
 				BF41A4CC233AD54E000D2DBE /* Assets.xcassets */,
 				BF41A4CE233AD54F000D2DBE /* LaunchScreen.storyboard */,
 				BF41A4D1233AD54F000D2DBE /* Info.plist */,
-				BF68FE33233C238900B217C8 /* GenericDataSource.swift */,
-				BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */,
 			);
 			path = "What's For Dinner?";
 			sourceTree = "<group>";
@@ -194,11 +228,10 @@
 		BF41A4D7233ADDE7000D2DBE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BF1CE891233C51BA00365530 /* Models */,
+				BF1CE890233C517F00365530 /* Cells */,
 				BF41A4C5233AD54D000D2DBE /* HomeViewController.swift */,
 				BF68FE2D233BD22000B217C8 /* HomeViewModel.swift */,
-				BF68FE31233BEEFD00B217C8 /* RestaurantTableViewCell.swift */,
-				BF41A4D8233B3609000D2DBE /* Restaurant.swift */,
-				BF2AF572233B54950050A698 /* Location.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -277,14 +310,16 @@
 				BF2AF57B233B6E370050A698 /* URLSessionProtocol.swift in Sources */,
 				BF68FE2E233BD22000B217C8 /* HomeViewModel.swift in Sources */,
 				BF2AF590233BC8DB0050A698 /* URLSessionProvider.swift in Sources */,
+				BF13B9D5233C55580055D028 /* GenericCollectionDataSource.swift in Sources */,
 				BF2AF571233B4F720050A698 /* Photo.swift in Sources */,
 				BF68FE32233BEEFD00B217C8 /* RestaurantTableViewCell.swift in Sources */,
+				BF13B9D7233C55650055D028 /* GenericCollectionDelegate.swift in Sources */,
 				BF2AF582233B6F7D0050A698 /* ParametersEncoding.swift in Sources */,
 				BF2AF57E233B6E860050A698 /* HTTPMethod.swift in Sources */,
 				BF2AF58D233BC88A0050A698 /* ProviderProtocol.swift in Sources */,
 				BF2AF56D233B4F620050A698 /* Review.swift in Sources */,
 				BF2AF573233B54950050A698 /* Location.swift in Sources */,
-				BF68FE34233C238900B217C8 /* GenericDataSource.swift in Sources */,
+				BF68FE34233C238900B217C8 /* GenericTableDataSource.swift in Sources */,
 				BF41A4D9233B3609000D2DBE /* Restaurant.swift in Sources */,
 				BF41A4C8233AD54D000D2DBE /* SecondViewController.swift in Sources */,
 				BF2AF580233B6EE00050A698 /* Task.swift in Sources */,
@@ -296,6 +331,7 @@
 				BF41A4C6233AD54D000D2DBE /* HomeViewController.swift in Sources */,
 				BF2AF587233BC76D0050A698 /* URLRequestExtension.swift in Sources */,
 				BF2AF58B233BC82C0050A698 /* NetworkError.swift in Sources */,
+				BF1CE893233C51DB00365530 /* TrendingCollectionViewCell.swift in Sources */,
 				BF68FE36233C24CE00B217C8 /* GenericTableDelegate.swift in Sources */,
 				BF2AF593233BCA390050A698 /* SearchService.swift in Sources */,
 				BF2AF576233B5D130050A698 /* APIClient.swift in Sources */,

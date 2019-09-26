@@ -1,5 +1,5 @@
 //
-//  GenericDataSource.swift
+//  GenericCollectionDataSource.swift
 //  What's For Dinner?
 //
 //  Created by Isaac Delgado on 9/25/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GenericDataSource<T, C: UITableViewCell>: NSObject, UITableViewDataSource {
+class GenericCollectionDataSource<T, C: UICollectionViewCell>: NSObject, UICollectionViewDataSource {
     typealias CellConfiguration = ((C, T) -> Void)
     
     var data: [T]
@@ -21,20 +21,20 @@ class GenericDataSource<T, C: UITableViewCell>: NSObject, UITableViewDataSource 
         self.configurationBlock = configurationBlock
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? C else {
-            return UITableViewCell()
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? C else {
+            return UICollectionViewCell()
         }
-        let item = data[indexPath.row]
+        
+        let item = data[indexPath.item]
         configurationBlock(cell, item)
+        
         return cell
     }
 }
+
+
