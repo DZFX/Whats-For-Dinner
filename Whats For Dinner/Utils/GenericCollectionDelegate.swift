@@ -25,6 +25,13 @@ class GenericCollectionDelegate: NSObject, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return cellSize ?? CGSize(width: 244, height: 122)
+        if let size = cellSize {
+            return size
+        } else if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+            let width = ((collectionView.bounds.size.width - layout.sectionInset.left - layout.sectionInset.right) / 2) - layout.minimumInteritemSpacing
+            return CGSize(width: width, height: width * 0.7)
+        } else {
+            return CGSize(width: 100, height: 100)
+        }
     }
 }

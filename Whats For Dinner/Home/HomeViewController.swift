@@ -64,6 +64,7 @@ class HomeViewController: UIViewController {
                 let restaurant = self.collectionDataSource?.data[indexPath.row] else { return }
             self.openDetail(from: restaurant)
         })
+        collectionDelegate?.cellSize = CGSize(width: 244, height: 122)
         
         collectionView.dataSource = collectionDataSource
         collectionView.delegate = collectionDelegate

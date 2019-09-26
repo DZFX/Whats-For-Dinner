@@ -16,6 +16,20 @@ class APIClient {
     
     private let sessionProvider = URLSessionProvider()
     
+    struct Common {
+        static func getCategories(completion: @escaping (Result<[Category], Error>) -> Void) {
+            APIClient.shared.sessionProvider.request(type: CategoriesResponse.self,
+                                                     service: CategoriesService.getCategories) { (response) in
+                                                        switch response {
+                                                        case let .failure(error):
+                                                            completion(.failure(error))
+                                                        case let.success(categories):
+                                                            completion(.success(categories.categories ?? []))
+                                                        }
+            }
+        }
+    }
+    
     struct Restaurants {
         
         static func searchFromCoordinates(latitude: Double, longitude: Double, completion: @escaping (Result<[Restaurant], Error>) -> Void) {
