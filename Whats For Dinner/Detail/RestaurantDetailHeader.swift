@@ -14,4 +14,28 @@ class RestaurantDetailHeader: UIView {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var cuisineLabel: UILabel!
 
+    var name: String {
+        set {
+            nameLabel.text = newValue
+        }
+        
+        get {
+            return nameLabel.text ?? ""
+        }
+    }
+    
+    var cuisine: String {
+        set {
+            cuisineLabel.text = newValue
+        }
+        
+        get {
+            return cuisineLabel.text ?? ""
+        }
+    }
+    
+    func setImageURLString(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        imageView.kf.setImage(with: url)
+    }
 }

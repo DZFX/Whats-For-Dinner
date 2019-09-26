@@ -35,6 +35,11 @@ extension UIViewController {
         let alert = alertController(title: "Error", message: message, preferredStyle: .alert, actions: [])
         presentAlert(alert, completion: nil)
     }
+    
+    static func instantiateFromStoryboard() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: String(describing: self))
+    }
 }
 
 

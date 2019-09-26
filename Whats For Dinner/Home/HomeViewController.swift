@@ -20,6 +20,11 @@ class HomeViewController: UIViewController {
     private var collectionDataSource: GenericCollectionDataSource<Restaurant, TrendingCollectionViewCell>?
     private var collectionDelegate: GenericCollectionDelegate?
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +42,10 @@ class HomeViewController: UIViewController {
                                                                                     cell.configure(with: restaurant)
         })
         
-        tableDelegate = GenericTableViewDelegate(selectionAction: { (indexPath) in
-            // move to detail
+        tableDelegate = GenericTableViewDelegate(selectionAction: { [weak self] (indexPath) in
+            guard let `self` = self,
+                let restaurant = self.tableDataSource?.data[indexPath.row] else { return }
+            self.openDetail(from: restaurant)
         })
         
         tableView.dataSource = tableDataSource
@@ -52,8 +59,10 @@ class HomeViewController: UIViewController {
                                                                                                     cell.configure(with: restaurant)
         })
         
-        collectionDelegate = GenericCollectionDelegate(selectionAction: { (indexPath) in
-            // move to detail
+        collectionDelegate = GenericCollectionDelegate(selectionAction: { [weak self] (indexPath) in
+            guard let `self` = self,
+                let restaurant = self.collectionDataSource?.data[indexPath.row] else { return }
+            self.openDetail(from: restaurant)
         })
         
         collectionView.dataSource = collectionDataSource
@@ -91,6 +100,13 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    // MARK: - User actions
+    private func openDetail(from restaurant: Restaurant) {
+        guard let detailVC = RestaurantDetailViewController.instantiateFromStoryboard() as? RestaurantDetailViewController else { return }
+        detailVC.setupViewModel(model: restaurant)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 
 }

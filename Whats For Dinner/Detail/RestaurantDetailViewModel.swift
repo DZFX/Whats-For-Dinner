@@ -57,7 +57,7 @@ class RestaurantDetailViewModel {
         
         if let text = restaurant.userRating?.ratingText { ratingStringArray.append(text) }
         if let score = restaurant.userRating?.aggregateRating { ratingStringArray.append(score) }
-        if let votes = restaurant.userRating?.votes { ratingStringArray.append(votes) }
+        if let votes = restaurant.userRating?.votes { ratingStringArray.append("\(votes) votes") }
         
         return ratingStringArray.joined(separator: " - ")
     }
