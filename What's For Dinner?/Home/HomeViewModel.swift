@@ -10,7 +10,9 @@ import Foundation
 
 class HomeViewModel {
     
-    func getNearbyRestaurants() {
-        APIClient.Restaurants.searchFromCurrentLocation()
+    func getNearbyRestaurants(completion: @escaping (Result<[Restaurant], Error>) -> Void) {
+        APIClient.Restaurants.searchFromCurrentLocation { (response) in
+            completion(response)
+        }
     }
 }

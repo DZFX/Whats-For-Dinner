@@ -6,7 +6,7 @@
 //  Copyright © 2019 Isaac Delgado. All rights reserved.
 //
 
-enum NetworkError {
+enum NetworkError: Error {
     case unknown
     case noJSONData
     case error(Error)

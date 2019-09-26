@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1CE88F233C339100365530 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CE88E233C339100365530 /* Extension.swift */; };
 		BF2AF56D233B4F620050A698 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF56C233B4F620050A698 /* Review.swift */; };
 		BF2AF56F233B4F6B0050A698 /* UserRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF56E233B4F6B0050A698 /* UserRating.swift */; };
 		BF2AF571233B4F720050A698 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF570233B4F720050A698 /* Photo.swift */; };
@@ -33,9 +34,13 @@
 		BF41A4D9233B3609000D2DBE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41A4D8233B3609000D2DBE /* Restaurant.swift */; };
 		BF68FE2E233BD22000B217C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE2D233BD22000B217C8 /* HomeViewModel.swift */; };
 		BF68FE30233BDBF600B217C8 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE2F233BDBF600B217C8 /* SearchResponse.swift */; };
+		BF68FE32233BEEFD00B217C8 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE31233BEEFD00B217C8 /* RestaurantTableViewCell.swift */; };
+		BF68FE34233C238900B217C8 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE33233C238900B217C8 /* GenericDataSource.swift */; };
+		BF68FE36233C24CE00B217C8 /* GenericTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF1CE88E233C339100365530 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BF2AF56C233B4F620050A698 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		BF2AF56E233B4F6B0050A698 /* UserRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRating.swift; sourceTree = "<group>"; };
 		BF2AF570233B4F720050A698 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -64,6 +69,9 @@
 		BF41A4D8233B3609000D2DBE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		BF68FE2D233BD22000B217C8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BF68FE2F233BDBF600B217C8 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		BF68FE31233BEEFD00B217C8 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		BF68FE33233C238900B217C8 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,10 +180,13 @@
 				BF41A4D7233ADDE7000D2DBE /* Home */,
 				BF41A4C3233AD54D000D2DBE /* AppDelegate.swift */,
 				BF41A4C7233AD54D000D2DBE /* SecondViewController.swift */,
+				BF1CE88E233C339100365530 /* Extension.swift */,
 				BF41A4C9233AD54D000D2DBE /* Main.storyboard */,
 				BF41A4CC233AD54E000D2DBE /* Assets.xcassets */,
 				BF41A4CE233AD54F000D2DBE /* LaunchScreen.storyboard */,
 				BF41A4D1233AD54F000D2DBE /* Info.plist */,
+				BF68FE33233C238900B217C8 /* GenericDataSource.swift */,
+				BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */,
 			);
 			path = "What's For Dinner?";
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 			children = (
 				BF41A4C5233AD54D000D2DBE /* HomeViewController.swift */,
 				BF68FE2D233BD22000B217C8 /* HomeViewModel.swift */,
+				BF68FE31233BEEFD00B217C8 /* RestaurantTableViewCell.swift */,
 				BF41A4D8233B3609000D2DBE /* Restaurant.swift */,
 				BF2AF572233B54950050A698 /* Location.swift */,
 			);
@@ -266,11 +278,13 @@
 				BF68FE2E233BD22000B217C8 /* HomeViewModel.swift in Sources */,
 				BF2AF590233BC8DB0050A698 /* URLSessionProvider.swift in Sources */,
 				BF2AF571233B4F720050A698 /* Photo.swift in Sources */,
+				BF68FE32233BEEFD00B217C8 /* RestaurantTableViewCell.swift in Sources */,
 				BF2AF582233B6F7D0050A698 /* ParametersEncoding.swift in Sources */,
 				BF2AF57E233B6E860050A698 /* HTTPMethod.swift in Sources */,
 				BF2AF58D233BC88A0050A698 /* ProviderProtocol.swift in Sources */,
 				BF2AF56D233B4F620050A698 /* Review.swift in Sources */,
 				BF2AF573233B54950050A698 /* Location.swift in Sources */,
+				BF68FE34233C238900B217C8 /* GenericDataSource.swift in Sources */,
 				BF41A4D9233B3609000D2DBE /* Restaurant.swift in Sources */,
 				BF41A4C8233AD54D000D2DBE /* SecondViewController.swift in Sources */,
 				BF2AF580233B6EE00050A698 /* Task.swift in Sources */,
@@ -278,9 +292,11 @@
 				BF41A4C4233AD54D000D2DBE /* AppDelegate.swift in Sources */,
 				BF2AF585233BC6BB0050A698 /* URLComponentsExtension.swift in Sources */,
 				BF2AF589233BC8250050A698 /* NetworkResponse.swift in Sources */,
+				BF1CE88F233C339100365530 /* Extension.swift in Sources */,
 				BF41A4C6233AD54D000D2DBE /* HomeViewController.swift in Sources */,
 				BF2AF587233BC76D0050A698 /* URLRequestExtension.swift in Sources */,
 				BF2AF58B233BC82C0050A698 /* NetworkError.swift in Sources */,
+				BF68FE36233C24CE00B217C8 /* GenericTableDelegate.swift in Sources */,
 				BF2AF593233BCA390050A698 /* SearchService.swift in Sources */,
 				BF2AF576233B5D130050A698 /* APIClient.swift in Sources */,
 				BF68FE30233BDBF600B217C8 /* SearchResponse.swift in Sources */,

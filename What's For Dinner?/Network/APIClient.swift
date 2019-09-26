@@ -18,14 +18,14 @@ class APIClient {
     
     struct Restaurants {
         
-        static func searchFromCurrentLocation() {
+        static func searchFromCurrentLocation(completion: @escaping (Result<[Restaurant], Error>) -> Void) {
             APIClient.shared.sessionProvider.request(type: SearchResponse.self,
                                     service: SearchService.searchNearby(latitude: 37.3229978, longitude: -122.0321823)) { (response) in
                                         switch response {
                                         case let .failure(error):
-                                            print(error)
+                                            completion(.failure(error))
                                         case let .success(restaurants):
-                                            print(restaurants)
+                                            completion(.success(restaurants.restaurants ?? []))
                                         }
             }
         }
