@@ -60,7 +60,7 @@ class RestaurantDetailViewModel {
     }
     
     var hasReviews: Bool {
-        return (restaurant.allReviewsCount ?? 0) > 0 ? true : false
+        return (restaurant.allReviews?.count ?? 0) > 0 ? true : false
     }
     
     var viewReviewsCounter: String {
@@ -75,7 +75,7 @@ class RestaurantDetailViewModel {
     }
     
     var hasPhotos: Bool {
-        return (restaurant.photoCount ?? 0) > 0 ? true : false
+        return (restaurant.photos?.count ?? 0) > 0 ? true : false
     }
     
     var viewPhotosCounter: String {

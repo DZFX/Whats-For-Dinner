@@ -51,6 +51,14 @@ class RestaurantDetailViewController: UIViewController {
         reviewsVC.navigationItem.prompt = viewModel.restaurantName
         navigationController?.pushViewController(reviewsVC, animated: true)
     }
+    
+    private func openPhotos(_ photos: [Photo]) {
+        guard let photosVC = PhotosViewController.instantiateFromStoryboard() as? PhotosViewController else { return }
+        photosVC.setPhotos(photos)
+        photosVC.navigationItem.title = "Photos"
+        photosVC.navigationItem.prompt = viewModel.restaurantName
+        navigationController?.pushViewController(photosVC, animated: true)
+    }
 }
 
 // MARK: - Table view data source
@@ -123,7 +131,7 @@ extension RestaurantDetailViewController: UITableViewDelegate {
             } else {
                 // Media
                 if viewModel.hasPhotos {
-                    
+                    openPhotos(viewModel.photos)
                 }
             }
         }

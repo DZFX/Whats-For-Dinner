@@ -17,6 +17,7 @@ class ReviewTableViewCell: UITableViewCell {
     @IBOutlet private weak var userLabel: UILabel!
     @IBOutlet private weak var likesLabel: UILabel!
 
+    // MARK: - Config
     func configureReview(_ review: Review) {
         dateLabel.text = review.reviewTimeFriendly ?? "Date unavailable"
         reviewLabel.text = "\"\(review.reviewText ?? "")\""

@@ -11,10 +11,12 @@ import UIKit
 class GenericCollectionDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     typealias Selection = ((IndexPath) -> Void)
+    typealias CellSize = ((UICollectionView, IndexPath) -> CGSize)
     
     let selectionAction: Selection
     
     var cellSize: CGSize?
+    var calculateCellSize: CellSize?
     
     init(selectionAction: @escaping Selection) {
         self.selectionAction = selectionAction
@@ -25,7 +27,9 @@ class GenericCollectionDelegate: NSObject, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if let size = cellSize {
+        if let cellSize = calculateCellSize {
+            return cellSize(collectionView, indexPath)
+        }else if let size = self.cellSize {
             return size
         } else if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
             let width = ((collectionView.bounds.size.width - layout.sectionInset.left - layout.sectionInset.right) / 2) - layout.minimumInteritemSpacing

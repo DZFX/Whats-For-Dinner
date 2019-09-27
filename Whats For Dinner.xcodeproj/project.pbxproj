@@ -47,6 +47,8 @@
 		BF68FE36233C24CE00B217C8 /* GenericTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */; };
 		BFA53A27233D9D4600015EAD /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA53A26233D9D4600015EAD /* ReviewsViewController.swift */; };
 		BFA53A29233D9E0C00015EAD /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA53A28233D9E0C00015EAD /* ReviewTableViewCell.swift */; };
+		BFA53A2B233DAB7400015EAD /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA53A2A233DAB7400015EAD /* PhotosViewController.swift */; };
+		BFA53A2D233DAB8500015EAD /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA53A2C233DAB8500015EAD /* PhotoCollectionViewCell.swift */; };
 		BFAA574C233CA3F9000F9616 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA574B233CA3F9000F9616 /* RestaurantDetailViewController.swift */; };
 		BFAA574E233CA40A000F9616 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA574D233CA40A000F9616 /* RestaurantDetailViewModel.swift */; };
 		BFAA5750233CA6E0000F9616 /* RestaurantDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA574F233CA6E0000F9616 /* RestaurantDetailHeader.swift */; };
@@ -98,6 +100,8 @@
 		BF68FE35233C24CE00B217C8 /* GenericTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableDelegate.swift; sourceTree = "<group>"; };
 		BFA53A26233D9D4600015EAD /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		BFA53A28233D9E0C00015EAD /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		BFA53A2A233DAB7400015EAD /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		BFA53A2C233DAB8500015EAD /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFAA574B233CA3F9000F9616 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		BFAA574D233CA40A000F9616 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
 		BFAA574F233CA6E0000F9616 /* RestaurantDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeader.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			children = (
 				BFAA574F233CA6E0000F9616 /* RestaurantDetailHeader.swift */,
 				BFA53A28233D9E0C00015EAD /* ReviewTableViewCell.swift */,
+				BFA53A2C233DAB8500015EAD /* PhotoCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			children = (
 				BFAA574B233CA3F9000F9616 /* RestaurantDetailViewController.swift */,
 				BFA53A26233D9D4600015EAD /* ReviewsViewController.swift */,
+				BFA53A2A233DAB7400015EAD /* PhotosViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -462,7 +468,9 @@
 				BFAA5750233CA6E0000F9616 /* RestaurantDetailHeader.swift in Sources */,
 				BF68FE32233BEEFD00B217C8 /* RestaurantTableViewCell.swift in Sources */,
 				BF13B9D7233C55650055D028 /* GenericCollectionDelegate.swift in Sources */,
+				BFA53A2B233DAB7400015EAD /* PhotosViewController.swift in Sources */,
 				BF2AF582233B6F7D0050A698 /* ParametersEncoding.swift in Sources */,
+				BFA53A2D233DAB8500015EAD /* PhotoCollectionViewCell.swift in Sources */,
 				BF2E6133233D4B5B003CF824 /* CategoryCollectionViewCell.swift in Sources */,
 				BF2E6126233CC877003CF824 /* CategoriesViewModel.swift in Sources */,
 				BFAA574C233CA3F9000F9616 /* RestaurantDetailViewController.swift in Sources */,
