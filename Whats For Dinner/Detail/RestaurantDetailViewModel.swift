@@ -65,9 +65,13 @@ class RestaurantDetailViewModel {
     
     var viewReviewsCounter: String {
         if hasReviews {
-            return "View \(restaurant.allReviewsCount ?? 0) reviews"
+            return "View \(restaurant.allReviews?.count ?? 0) reviews"
         }
         return "No reviews yet"
+    }
+    
+    var reviews: [Review] {
+        return restaurant.allReviews ?? []
     }
     
     var hasPhotos: Bool {
@@ -76,9 +80,13 @@ class RestaurantDetailViewModel {
     
     var viewPhotosCounter: String {
         if hasPhotos {
-            return "View \(RestaurantDetailViewModel.viewPhotos) photos"
+            return "View \(restaurant.photos?.count ?? 0) photos"
         }
         return "No photos uploaded"
+    }
+    
+    var photos: [Photo] {
+        return restaurant.photos ?? []
     }
     
     var numberOfHighlights: Int {

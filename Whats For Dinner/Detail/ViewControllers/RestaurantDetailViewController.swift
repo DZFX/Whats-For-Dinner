@@ -10,10 +10,14 @@ import UIKit
 
 class RestaurantDetailViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private var detailHeader: RestaurantDetailHeader!
+    
+    // MARK: - Properties
     private var viewModel: RestaurantDetailViewModel!
     
+    // MARK: - Life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -25,6 +29,7 @@ class RestaurantDetailViewController: UIViewController {
         title = viewModel.restaurantName
     }
     
+    // MARK: - Config
     func setupViewModel(model: Restaurant) {
         viewModel = RestaurantDetailViewModel(restaurant: model)
     }
@@ -37,8 +42,18 @@ class RestaurantDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    // MARK: - User actions
+    private func openReviews(_ reviews: [Review]) {
+        guard let reviewsVC = ReviewsViewController.instantiateFromStoryboard() as? ReviewsViewController else { return }
+        reviewsVC.setReviews(reviews)
+        reviewsVC.navigationItem.title = "Reviews"
+        reviewsVC.navigationItem.prompt = viewModel.restaurantName
+        navigationController?.pushViewController(reviewsVC, animated: true)
+    }
 }
 
+// MARK: - Table view data source
 extension RestaurantDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -92,8 +107,25 @@ extension RestaurantDetailViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Table view delegate
 extension RestaurantDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.title(from: section)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                // Reviews
+                if viewModel.hasReviews {
+                    openReviews(viewModel.reviews)
+                }
+            } else {
+                // Media
+                if viewModel.hasPhotos {
+                    
+                }
+            }
+        }
     }
 }
