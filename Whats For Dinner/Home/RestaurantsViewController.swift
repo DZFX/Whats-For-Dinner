@@ -16,6 +16,7 @@ class RestaurantsViewController: UIViewController {
     @IBOutlet weak var trendingView: UIView!
     @IBOutlet weak var nearLabel: UILabel!
     @IBOutlet weak var nearView: UIView!
+    @IBOutlet var mapButton: UIBarButtonItem!
     
     // MARK: - Private properties
     private let viewModel = RestaurantsViewModel()
@@ -36,19 +37,15 @@ class RestaurantsViewController: UIViewController {
     // MARK: - Life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if displayTrending {
-            navigationController?.setNavigationBarHidden(true, animated: true)
-        } else {
-            navigationController?.setNavigationBarHidden(false, animated: true)
-        }
         
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = mapButton
         setupTableView()
-        
         if displayTrending {
             setupCollectionView()
         } else {
@@ -149,6 +146,17 @@ class RestaurantsViewController: UIViewController {
         guard let detailVC = RestaurantDetailViewController.instantiateFromStoryboard() as? RestaurantDetailViewController else { return }
         detailVC.setupViewModel(model: restaurant)
         navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    private func openMap(with restaurants: [Restaurant]) {
+        guard let mapVC = MapViewController.instantiateFromStoryboard() as? MapViewController else { return }
+        mapVC.configure(restaurants: restaurants)
+        mapVC.title = title ?? "Near You"
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
+    
+    @IBAction func tappedMapButton() {
+        openMap(with: tableDataSource?.data ?? [])
     }
 
 }

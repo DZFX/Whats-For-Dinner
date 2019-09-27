@@ -228,6 +228,7 @@
                     <navigationItem key="navigationItem" id="dPE-sV-gQO"/>
                     <connections>
                         <outlet property="collectionView" destination="ciL-86-V13" id="rb8-hQ-mn3"/>
+                        <outlet property="mapButton" destination="2Wf-ew-S32" id="I0Y-vr-Y1m"/>
                         <outlet property="nearLabel" destination="RV0-Nb-5vx" id="KWq-Pv-uFR"/>
                         <outlet property="nearView" destination="wSd-AK-ILF" id="y1Y-Ss-Y72"/>
                         <outlet property="tableView" destination="5qh-qU-871" id="6ce-67-1Ns"/>
@@ -235,6 +236,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Map" style="plain" id="2Wf-ew-S32">
+                    <connections>
+                        <action selector="tappedMapButton" destination="9pv-A4-QxB" id="Cdn-7h-CAJ"/>
+                    </connections>
+                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
@@ -281,6 +287,7 @@
                     </view>
                     <connections>
                         <outlet property="detailHeader" destination="32m-mi-TJO" id="9Li-5g-bAU"/>
+                        <outlet property="mapButton" destination="5xT-3l-IGr" id="laR-Fp-hBJ"/>
                         <outlet property="tableView" destination="p0C-G4-fPg" id="hXj-CD-r5A"/>
                     </connections>
                 </viewController>
@@ -338,8 +345,13 @@
                         <outlet property="nameLabel" destination="xkU-i0-jGn" id="U03-pU-s17"/>
                     </connections>
                 </view>
+                <barButtonItem title="Map" style="plain" id="5xT-3l-IGr">
+                    <connections>
+                        <action selector="tappedMapButton" destination="z4Y-9o-MVh" id="i96-Il-tea"/>
+                    </connections>
+                </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="2843.4782608695655" y="-4.0178571428571423"/>
+            <point key="canvasLocation" x="2516" y="-320"/>
         </scene>
         <!--Reviews View Controller-->
         <scene sceneID="Zhd-o7-CR0">
@@ -434,7 +446,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJN-z2-RyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4047.826086956522" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="3401" y="-320"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="AA0-Rz-uux">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="JKJ-bn-lZx" customClass="MapViewController" customModule="Whats_For_Dinner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0je-ei-lb5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJd-IE-zeP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CJd-IE-zeP" firstAttribute="leading" secondItem="h3K-iS-Q9t" secondAttribute="leading" id="6No-81-ToY"/>
+                            <constraint firstItem="h3K-iS-Q9t" firstAttribute="trailing" secondItem="CJd-IE-zeP" secondAttribute="trailing" id="Gpn-kk-DEX"/>
+                            <constraint firstItem="h3K-iS-Q9t" firstAttribute="bottom" secondItem="CJd-IE-zeP" secondAttribute="bottom" id="S9s-qC-eKW"/>
+                            <constraint firstItem="CJd-IE-zeP" firstAttribute="top" secondItem="h3K-iS-Q9t" secondAttribute="top" id="tWF-Vk-o4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h3K-iS-Q9t"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="CJd-IE-zeP" id="ek5-Pf-1UK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAT-ex-VjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2516" y="360"/>
         </scene>
         <!--Photos View Controller-->
         <scene sceneID="3hu-xe-7zc">
@@ -494,7 +535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flU-WB-OWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4047.826086956522" y="323.4375"/>
+            <point key="canvasLocation" x="3400" y="360"/>
         </scene>
         <!--Categories View Controller-->
         <scene sceneID="wg7-f3-ORb">

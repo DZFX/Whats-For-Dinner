@@ -13,9 +13,11 @@ class RestaurantDetailViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private var detailHeader: RestaurantDetailHeader!
+    @IBOutlet private var mapButton: UIBarButtonItem!
     
     // MARK: - Properties
     private var viewModel: RestaurantDetailViewModel!
+    var canDisplayMap = true
     
     // MARK: - Life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +28,7 @@ class RestaurantDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
+        if canDisplayMap { navigationItem.rightBarButtonItem = mapButton }
         title = viewModel.restaurantName
     }
     
@@ -58,6 +61,18 @@ class RestaurantDetailViewController: UIViewController {
         photosVC.navigationItem.title = "Photos"
         photosVC.navigationItem.prompt = viewModel.restaurantName
         navigationController?.pushViewController(photosVC, animated: true)
+    }
+    
+    private func openMap(with restaurants: [Restaurant]) {
+        guard let mapVC = MapViewController.instantiateFromStoryboard() as? MapViewController else { return }
+        mapVC.configure(restaurants: restaurants)
+        mapVC.canDisplayDetail = false
+        mapVC.title = title
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
+    
+    @IBAction func tappedMapButton() {
+        openMap(with: [viewModel.restaurant])
     }
 }
 
