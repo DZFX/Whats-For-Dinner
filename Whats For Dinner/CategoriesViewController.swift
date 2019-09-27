@@ -50,7 +50,9 @@ class CategoriesViewController: UIViewController {
 
     // MARK: - Network calls
     private func retrieveCategories() {
+        collectionView.showActivityIndicator()
         viewModel.getCategories { [weak self] (result) in
+            self?.collectionView.hideActivityIndicator()
             guard let `self` = self else { return }
             switch result {
             case let .failure(error):

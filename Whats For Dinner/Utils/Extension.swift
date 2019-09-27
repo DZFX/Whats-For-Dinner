@@ -8,6 +8,33 @@
 
 import UIKit
 
+extension UIView {
+    func showActivityIndicator() {
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            let activityIndicator = UIActivityIndicatorView(style: .gray)
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            activityIndicator.center = self.center
+            self.addSubview(activityIndicator)
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.tag = -404
+            activityIndicator.backgroundColor = UIColor.white.withAlphaComponent(0.7)
+            activityIndicator.startAnimating()
+        }
+    }
+    
+    func hideActivityIndicator() {
+        DispatchQueue.main.async { [weak self] in
+            guard
+                let `self` = self,
+                let activityIndicator = self.viewWithTag(-404) as? UIActivityIndicatorView else { return }
+            activityIndicator.stopAnimating()
+            activityIndicator.removeConstraints(activityIndicator.constraints)
+            activityIndicator.removeFromSuperview()
+        }
+    }
+}
+
 extension UIViewController {
     @discardableResult func alertController(title: String?, message: String?, preferredStyle: UIAlertController.Style, actions: [UIAlertAction]) -> UIAlertController {
         

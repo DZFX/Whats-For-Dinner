@@ -26,6 +26,11 @@ class RestaurantsViewController: UIViewController {
     private var collectionDataSource: GenericCollectionDataSource<Restaurant, TrendingCollectionViewCell>?
     private var collectionDelegate: GenericCollectionDelegate?
     private var displayTrending: Bool = true
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        return refreshControl
+    }()
     
     // MARK: - Public
     func setCategory(_ category: Category) {
@@ -64,6 +69,7 @@ class RestaurantsViewController: UIViewController {
 
     // MARK: - Config
     private func setupTableView() {
+        tableView.addSubview(refreshControl)
         tableDataSource = GenericTableDataSource<Restaurant, RestaurantTableViewCell>(data: [],
                                                                                  reuseIdentifier: "RestaurantCell",
                                                                                  configurationBlock: { (cell, restaurant) in
@@ -110,8 +116,13 @@ class RestaurantsViewController: UIViewController {
     
     // MARK: - Network actions
     private func retrieveRestaurants() {
+        tableView.showActivityIndicator()
         viewModel.getNearbyRestaurants { [weak self] (result) in
             guard let `self` = self else { return }
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+            }
+            self.tableView.hideActivityIndicator()
             switch result {
             case let .failure(error):
                 self.displayAlert(message: error.localizedDescription)
@@ -126,8 +137,10 @@ class RestaurantsViewController: UIViewController {
     }
     
     private func retrieveTrending() {
+        collectionView.showActivityIndicator()
         viewModel.getTrendingRestaurants { [weak self] (result) in
             guard let `self` = self else { return }
+            self.collectionView.hideActivityIndicator()
             switch result {
             case let .failure(error):
                 self.displayAlert(message: error.localizedDescription)
@@ -157,6 +170,13 @@ class RestaurantsViewController: UIViewController {
     
     @IBAction func tappedMapButton() {
         openMap(with: tableDataSource?.data ?? [])
+    }
+    
+    @objc func refreshData() {
+        if displayTrending {
+            retrieveTrending()
+        }
+        retrieveRestaurants()
     }
 
 }
