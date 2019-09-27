@@ -282,10 +282,10 @@
 			children = (
 				BF1CE894233C522400365530 /* Utils */,
 				BF2AF574233B5CFC0050A698 /* Network */,
-				BF2AF56B233B4F4A0050A698 /* Detail */,
 				BF41A4D7233ADDE7000D2DBE /* Home */,
-				BF41A4C3233AD54D000D2DBE /* AppDelegate.swift */,
 				BF7FD166233CC7BD0048E8F0 /* Categories */,
+				BF2AF56B233B4F4A0050A698 /* Detail */,
+				BF41A4C3233AD54D000D2DBE /* AppDelegate.swift */,
 				BF41A4C9233AD54D000D2DBE /* Main.storyboard */,
 				BF41A4CC233AD54E000D2DBE /* Assets.xcassets */,
 				BF41A4CE233AD54F000D2DBE /* LaunchScreen.storyboard */,

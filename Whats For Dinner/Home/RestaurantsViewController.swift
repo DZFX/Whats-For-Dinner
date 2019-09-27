@@ -26,6 +26,7 @@ class RestaurantsViewController: UIViewController {
     private var collectionDelegate: GenericCollectionDelegate?
     private var displayTrending: Bool = true
     
+    // MARK: - Public
     func setCategory(_ category: Category) {
         title = category.name
         displayTrending = false

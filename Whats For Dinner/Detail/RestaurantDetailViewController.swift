@@ -22,6 +22,7 @@ class RestaurantDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
+        title = viewModel.restaurantName
     }
     
     func setupViewModel(model: Restaurant) {
@@ -59,6 +60,7 @@ extension RestaurantDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") ?? UITableViewCell(style: .default, reuseIdentifier: "DetailCell")
+        cell.accessoryType = .none
         
         switch indexPath.section {
         case 0: // Hours & Contact
@@ -75,9 +77,11 @@ extension RestaurantDetailViewController: UITableViewDataSource {
         case 2: // Reviews & Media
             switch indexPath.row {
             case 0:
-                cell.textLabel?.text = RestaurantDetailViewModel.viewReviews
+                cell.textLabel?.text = viewModel.viewReviewsCounter
+                if viewModel.hasReviews { cell.accessoryType = .disclosureIndicator }
             default:
-                cell.textLabel?.text = RestaurantDetailViewModel.viewPhotos
+                cell.textLabel?.text = viewModel.viewPhotosCounter
+                if viewModel.hasPhotos { cell.accessoryType = .disclosureIndicator }
             }
         default: // Other Info
             cell.textLabel?.text = viewModel.highlight(row: indexPath.row)

@@ -10,9 +10,6 @@ import Foundation
 
 class RestaurantDetailViewModel {
     
-    static let viewReviews = "View Reviews"
-    static let viewPhotos = "View Photos"
-    
     let restaurant: Restaurant
     
     let sectionTitles: [String] = {
@@ -60,6 +57,28 @@ class RestaurantDetailViewModel {
         if let votes = restaurant.userRating?.votes { ratingStringArray.append("\(votes) votes") }
         
         return ratingStringArray.joined(separator: " - ")
+    }
+    
+    var hasReviews: Bool {
+        return (restaurant.allReviewsCount ?? 0) > 0 ? true : false
+    }
+    
+    var viewReviewsCounter: String {
+        if hasReviews {
+            return "View \(restaurant.allReviewsCount ?? 0) reviews"
+        }
+        return "No reviews yet"
+    }
+    
+    var hasPhotos: Bool {
+        return (restaurant.photoCount ?? 0) > 0 ? true : false
+    }
+    
+    var viewPhotosCounter: String {
+        if hasPhotos {
+            return "View \(RestaurantDetailViewModel.viewPhotos) photos"
+        }
+        return "No photos uploaded"
     }
     
     var numberOfHighlights: Int {
